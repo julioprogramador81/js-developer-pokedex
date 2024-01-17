@@ -1,24 +1,123 @@
-* {
-    font-family: 'Roboto', sans-serif;
-    box-sizing: border-box;
-}
 
 body {
-    background-color: #f6f8fc;
+  background: rgb(85, 144, 189);
+  background: linear-gradient(
+    90deg,
+    rgb(44, 44, 46) 0%,
+    rgb(40, 40, 41) 54%,
+    rgba(13, 13, 14, 0.164) 82%
+  );
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-family: "Oswald", sans-serif;
 }
 
-.content {
-    width: 100vw;
-    height: 100vh;
-    padding: 1rem;
-    background-color: #fff;
+h1 {
+  margin-top: 50px;
+  color: white;
 }
 
-@media screen and (min-width: 992px) {
-    .content {
-        max-width: 992px;
-        height: auto;
-        margin: 1rem auto;
-        border-radius: 1rem;
-    }
+.pokemon-container {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  gap: 20px;
+  width: 80%;
+  margin-left: 140px;
+  margin-right: 70px;
+  margin-bottom: 50px;
+  margin-top: 20px;
+  
+}
+
+.pokemon-block,
+.pokemon-block-back {
+  border-radius: 10px;
+  padding: 5px;
+  width: 80px;
+  background-color: #f4f4f4;
+  box-shadow: 0 3px 15px rgba(100, 100, 100, 0.5);
+}
+
+.img-container {
+ /* background-image: url("./blob.svg");*/
+  background-repeat: no-repeat;
+  background-position: center;
+  
+  height: 200px;
+  margin-bottom: 50px;
+  padding-bottom: 30px;
+  background-color: beige;
+}
+
+.pokemon-block p {
+  margin-top: -21px ;
+  font-size: 22px;
+}
+
+.name {
+  text-transform: capitalize;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+#spinner {
+  display: none;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+ 
+}
+
+.pagination {
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 50px;
+}
+
+.card-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+ 
+}
+
+/*.flip-card:hover .card-container {
+  transform: rotateY(180deg);
+}*/
+
+.pokemon-block,
+.pokemon-block-back {
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.pokemon-block-back {
+  transform: rotateY(180deg);
+  position: absolute;
+  top: 0%;
+}
+
+.stat-container {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  text-align: left;
+}
+
+
+img{
+
+background-color: #fff;
+border-radius: 50%;
+ margin-top: 50px;
+ width: 130px;
+}
+.title{
+
+  margin-top: 30px;
+  margin-bottom: 40px;
 }
